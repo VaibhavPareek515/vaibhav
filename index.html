@@ -1,48 +1,320 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Windows</title>
+	<title>Windows V</title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <style>
 	* {
+		box-sizing: border-box;
 		padding: 0px;
 		margin: 0px;
-		box-sizing: border-box;
 	}
-	#main {
-		width: 100%;
+
+	body {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	#Desktop {
 		height: 100vh;
-		background: linear-gradient(45deg, skyblue, deepskyblue);
-	}
-
-	#foot {
-		height: 70px;
 		width: 100%;
-		background: linear-gradient(45deg, hotpink, purple);
-		position: absolute;
-		top: 95vh;
-		
-		
-	}
-
-	#foot ul {
+		background: linear-gradient(45deg, skyblue, deepskyblue);
+		/*background-image: url(E:\MyBox\Projects\Windows V\img\wallpaper.jpg);
+		background-color: #cccccc;*/
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
+	#taskbar {
+		height:40px;
+		width: 100%;
+		background: linear-gradient(60deg,hotpink,red);
+		position: fixed;
+		bottom: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#taskbar ul {
+		display: flex;
+		padding-bottom: 7px;
+		padding-top: 7px;
+	}
+
+	#taskbar ul li {
+		list-style: none;
+		margin-right: 10px;
+
+
+	}
+
+	.hove:hover {
+		border-bottom-style: solid;	
+		border-color: white;
+		cursor: pointer; 
+	}
+
+	#test {
+		height: 0px;
+		width: 400px;
+		background-color: white;
+		border-radius: 10px;
+		position: absolute;
+		bottom: 40px;
+		display: flex;
+		overflow: hidden;
+	}
+
+	#test.go {
+		height: 400px;
+		/*transition: 0.4s;*/
+	}
+
+	#start.startbor {
+		border-bottom-style: solid;
+		border-color: white; 
+	}
+
+	#test ul {
+		/*border-style: solid;*/
+		margin-top:25px;
+	}
+
+	#test ul li {
+		list-style: none;
+		margin: 15px;
+		/*border-style: solid;*/
+		display: flex;
+		align-items: center;
+		column-gap: 7px;
+	}
+
+	.lihover:hover {
+		color: hotpink;
+		cursor: pointer;
+		/*background-color: lightpink;*/
+	}
+	
+	#it1 {
+		height: 100%;
+		width: 60%;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#it2 {
+		height: 100%;
+		width: 40%;
+		margin: 0px;
+		padding: 0px;
+		padding-top: 15px;
+		background: linear-gradient(45deg,hotpink,red);
+		
+		
+	}
+
+	.center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+	}
+
+	#ams ul {
+		margin: 0px;
+
+	}
+
+	#ams ul li {
+		/*text-align: center;*/
+		color: white;
+		cursor: pointer;
+	}
+
+	#but {
+		height: 30px;
+		width: 100%;
+		border-radius: 10px;
+		border-style: none;
+		background: linear-gradient(45deg,hotpink,red);
+		color: white;
+		font-size: 15px;
+	}
+
+	#but:hover {
+		background: white;
+		color: hotpink;
+		cursor: pointer;
+	}
+
+	#notepad.bor {
+		border-bottom-style: solid;
+		border-color: white;
+	}
+
+	#notewin {
+		width: 700px;
+		height: 0px;
+		background-color: white;
+		overflow: hidden;
+	}
+
+	#notewin.notewinshow {
+		height: 500px;
+	}
+
+	#ocm {
+		display: flex;
+		background-color: #ebeef2;
+		
+	}
+
+	#iocm1 {
+		width: 50%;
+
+	}
+
+	#iocm2 {
+		width: 50%;
+		display: flex;
+		justify-content: right;
+		align-items: right;
+	}
+
+	#iocm2 button {
+		width: 20px;
+		border: none;
+		cursor: pointer;
+	}
+
+	#x {
+		background-color:#ed2633;
+		color: white;
+	}
+
+	#head ul {
+		display: flex;
+		list-style: none;
+		column-gap: 7px;
+		background-color:#ebeef2; 
+		/*border-top-width: 0.1px;*/
+		/*border-top-style: solid;*/
+		margin-left: 5px;
+	}
+	#middle {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#middle textarea {
+	 resize: none;
+	 height: 430px;
+	 width: 100%;	
+	}
+
+	#ifoot {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color:#ebeef2;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	
 </style>
 <body>
-<div id="main">
-	<div id="foot">
+<div id="Desktop">
+	
+	<div id="test">
+		<div id="it1">
 		<ul>
-			<li>Home</li>
-			<li>Home</li>
-			<li>Home</li>
-			<li>Home</li>
-			
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\chrome-24.png">Chrome</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\notepad-24.png">Notepad</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\music-24.png">Music</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\visual-studio-logo-24.png">Visual Studio</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\git-logo-24.png">Git</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\nodejs-logo-24.png">Node.js</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\unity-logo-24.png">Unity</li>
+			<li class="lihover"><img src="E:\MyBox\Projects\Windows V\img\terminal-solid-24.png">CMD</li>
+
+
 
 		</ul>
+		</div>
+		<div id="it2">
+			<div class="center">
+			<img src="E:\MyBox\Projects\Windows V\img\user-60.png">
+		 	</div>
+		 	<div id="ams">
+		 		<ul>
+		 			<li>Vaibhav</li>
+		 			<li>Documents</li>
+		 			<li>Pitures</li>
+		 			<li>Games</li>
+		 			<li>Computer</li>
+		 			<li>Control Panel</li>
+		 			<li>Help</li>
+		 			<li><button id="but">Shutdown</button></li>	
+		 		</ul>
+		 	</div>
+		</div>
+	</div>
+	<div id="notewin">
+		<div id="ocm">
+			<div id="iocm1">Notepad</div>
+			<div id="iocm2">
+				<button>_</button>
+				<button>□</button>
+				<button id="x">x</button>
+			</div>
+		</div>
+		<div id="head">
+			<ul>
+				<li>File</li>
+				<li>Edit</li>
+				<li>Format</li>
+				<li>View</li>
+				<li>Help</li>
+			</ul>
+		</div>
+		<div id="middle"><textarea></textarea></div>
+		<div id="foot">
+			<div id="ifoot">
+			<button>B</button>
+			<button>I</button>
+			<button>U</button>
+			<input type="number" name="">
+			</div>
+		</div>
+	</div>
+	<div id="taskbar">
+	<ul>
+		<li><img id="start" onclick="show()" class="hove" src="E:\MyBox\Projects\Windows V\img\windows-logo-24.png"></li>
+		<li><img class="hove" src="E:\MyBox\Projects\Windows V\img\chrome-logo-24.png"></li>
+		<li><img id="notepad" onclick="note()" class="hove" src="E:\MyBox\Projects\Windows V\img\notepad-solid-24.png"></li>
+		<li><img class="hove" src="E:\MyBox\Projects\Windows V\img\music-solid-24.png"></li>	
+	</ul>
+	
 	</div>
 </div>
+<script>
+	function show() {
+		document.getElementById('test').classList.toggle('go');
+		document.getElementById('start').classList.toggle('startbor');
+	}
+
+	function note() {
+		document.getElementById('notepad').classList.toggle('bor');
+		document.getElementById('notewin').classList.toggle('notewinshow');
+	}
+</script>
 </body>
 </html>
